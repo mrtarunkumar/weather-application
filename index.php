@@ -18,8 +18,15 @@
        $decoded_string = json_decode($json_string,true);
         
         //Print 
-        print_r($decoded_string);
+        //print_r($decoded_string);
         
+       
+        $location_country = $decoded_string['current_observation']['display_location']['country']; 
+        $location_city = $decoded_string['current_observation']['display_location']['city'];
+        
+        echo "Country: " . $location_country . "<br />";
+        echo "City: " . $location_city . "<br/>";
+
         ?>
     </body>
 </html>
