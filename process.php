@@ -30,17 +30,34 @@
         //Forecast
         //Day 0
         $location_forcast_day0 = $decoded_string['forecast']['txt_forecast']['forecastday']['0']['title'];
-        $location_forcast_icon0 = $decoded_string['forecast']['txt_forecast']['forecastday']['0']['icon'];
         $location_forcast_icon_url0 = $decoded_string['forecast']['txt_forecast']['forecastday']['0']['icon_url'];                          
         $location_forcast_fcttext_metric0 = $decoded_string['forecast']['txt_forecast']['forecastday']['0']['fcttext_metric']; 
+        
+        //Day 1
+        $location_forcast_day1 = $decoded_string['forecast']['txt_forecast']['forecastday']['2']['title'];
+        $location_forcast_icon_url1 = $decoded_string['forecast']['txt_forecast']['forecastday']['2']['icon_url'];                          
+        $location_forcast_fcttext_metric1 = $decoded_string['forecast']['txt_forecast']['forecastday']['2']['fcttext_metric']; 
+        
+        //Day 2
+        $location_forcast_day2 = $decoded_string['forecast']['txt_forecast']['forecastday']['4']['title'];
+        $location_forcast_icon_url2 = $decoded_string['forecast']['txt_forecast']['forecastday']['4']['icon_url'];                          
+        $location_forcast_fcttext_metric2 = $decoded_string['forecast']['txt_forecast']['forecastday']['4']['fcttext_metric']; 
         
         echo "Country: " . $location_country . "<br />";
         echo "City: " . $location_city . "<br/>";
         echo "Temp: " . $location_temp_c . "<br/>";
+        
         echo "Forcast Day: " . $location_forcast_day0 . "<br/>";
-        echo "Forcast Icon URL: " . $location_forcast_icon_url0 . "<br/>";
         echo "<img src='" . $location_forcast_icon_url0 . "' />";
-        echo "Forcast Text: " . $location_forcast_fcttext_metric0 . "<br/>";     
+        echo "Forcast Text: " . $location_forcast_fcttext_metric0 . "<br/>";    
+        
+        echo "Forcast Day: " . $location_forcast_day1 . "<br/>";
+        echo "<img src='" . $location_forcast_icon_url1 . "' />";
+        echo "Forcast Text: " . $location_forcast_fcttext_metric1 . "<br/>"; 
+        
+        echo "Forcast Day: " . $location_forcast_day2 . "<br/>";
+        echo "<img src='" . $location_forcast_icon_url2 . "' />";
+        echo "Forcast Text: " . $location_forcast_fcttext_metric2 . "<br/>"; 
         
         ?>
     </body>
