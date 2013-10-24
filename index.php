@@ -10,7 +10,16 @@
         
         <!-- Weather Underground Code -->     
         <?php
-        // put your code here
+        // Weather Underground API request
+        // Store initial request
+        $json_string = file_get_contents("http://api.wunderground.com/api/c351cf41056050c6/geolookup/conditions/q/UK/Leicester.json");
+        
+        // Decodes JSON string
+       $decoded_string = json_decode($json_string,true);
+        
+        //Print 
+        print_r($decoded_string);
+        
         ?>
     </body>
 </html>
