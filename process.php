@@ -31,12 +31,18 @@
         echo "City: " . $location_city . "<br/>";
         echo "Temp: " . $location_temp_c . "<br/>";
         
-        //Forecast
+        //Forecast for three days and removing night information
+        $i=0;
         foreach ($decoded_string['forecast']['txt_forecast']['forecastday'] as $forecast)
         {
-            echo "Forcast Day: " . $forecast['title'] . "<br/>";
-            echo "<img src='" . $forecast['icon_url'] . "' />";
-            echo "Forcast Text: " . $forecast['fcttext_metric'] . "<br/>";  
+            if(stripos(($forecast['title']), "night") == false){
+                echo "Forcast Day: " . $forecast['title'] . "<br/>";
+                echo "Forcast Text: " . $forecast['fcttext_metric'] . "<br/>";  
+                echo "<img src='" . $forecast['icon_url'] . "' />" . "<br/>";
+                echo "-------------------------------------------------------" . "<br/>";
+                $i++;
+                if($i==3) break;
+            }
         } 
         
         ?>
