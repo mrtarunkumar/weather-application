@@ -11,7 +11,7 @@
         <!-- Weather Underground Code -->     
         <?php
         // City Location
-        $query_city = $_POST["city"];
+        $query_city = $_GET["city"];
         
         // Weather Underground API request
         // Store initial request
