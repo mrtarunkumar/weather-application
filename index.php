@@ -10,7 +10,7 @@
     <body>
         <img src="img/wundergroundLogo_black_horz.jpg" alt="Weather Underground logo" />
         <h1>Weather Underground Application</h1>
-        <p>Please enter a UK city name</p>
+        <p>Please enter a UK city name eg Leeds</p>
         <form action="process.php" method="get">
             City: <input id="citylocation" type="text" name="city" /><input type="submit"/>
         </form>
@@ -19,7 +19,7 @@
         <script>
         $(document).ready(function(){
             $("#citylocation").autocomplete('lib/search.php', {
-                minChars: 3
+                minChars: 2
             });
         });
         </script>
